@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<com.ibm.team.build.internal.hjplugin.RTCScm_-DescriptorImpl plugin="teamconcert@1.2.0.3">
+  <generation>1</generation>
+  <globalTimeout>0</globalTimeout>
+  <globalAvoidUsingToolkit>false</globalAvoidUsingToolkit>
+</com.ibm.team.build.internal.hjplugin.RTCScm_-DescriptorImpl>

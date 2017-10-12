@@ -1,0 +1,201 @@
+--- Copying files at Thu Oct 12 00:32:19 UTC 2017
+INSTALLED init.groovy.d/default-user.groovy
+INSTALLED init.groovy.d/tcp-slave-agent-port.groovy
+INSTALLED jenkins.install.InstallUtil.lastExecVersion
+INSTALLED jenkins.install.UpgradeWizard.state
+INSTALLED plugins/git.jpi : 3.6.0
+INSTALLED plugins/jira.jpi : 2.4.2
+INSTALLED plugins/htmlpublisher.jpi : 1.14
+INSTALLED plugins/matrix-auth.jpi : 2.0
+INSTALLED plugins/workflow-support.jpi : 2.15
+INSTALLED plugins/timestamper.jpi : 1.8.8
+INSTALLED plugins/jquery.jpi : 1.12.4-0
+INSTALLED plugins/credentials.jpi : 2.1.16
+INSTALLED plugins/extended-choice-parameter.jpi : 0.76
+INSTALLED plugins/pubsub-light.jpi : 1.12
+INSTALLED plugins/token-macro.jpi : 2.3
+INSTALLED plugins/cucumber-reports.jpi : 3.11.0
+INSTALLED plugins/cucumber.jpi : 0.0.2
+INSTALLED plugins/ssh-slaves.jpi : 1.21
+INSTALLED plugins/workflow-api.jpi : 2.22
+INSTALLED plugins/resource-disposer.jpi : 0.8
+INSTALLED plugins/display-url-api.jpi : 2.1.0
+INSTALLED plugins/git-client.jpi : 2.5.0
+INSTALLED plugins/antisamy-markup-formatter.jpi : 1.5
+INSTALLED plugins/gradle.jpi : 1.28
+INSTALLED plugins/cucumber-testresult-plugin.jpi : 0.9.7
+INSTALLED plugins/windows-slaves.jpi : 1.3.1
+INSTALLED plugins/bouncycastle-api.jpi : 2.16.2
+INSTALLED plugins/cloudbees-folder.jpi : 6.2.0
+INSTALLED plugins/email-ext.jpi : 2.60
+INSTALLED plugins/mailer.jpi : 1.20
+INSTALLED plugins/ws-cleanup.jpi : 0.34
+INSTALLED plugins/branch-api.jpi : 2.0.14
+INSTALLED plugins/ruby-runtime.jpi : 0.12
+INSTALLED plugins/durable-task.jpi : 1.14
+INSTALLED plugins/custom-tools-plugin.jpi : 0.5
+INSTALLED plugins/script-security.jpi : 1.34
+INSTALLED plugins/workflow-scm-step.jpi : 2.6
+INSTALLED plugins/jackson2-api.jpi : 2.8.7.0
+INSTALLED plugins/build-timeout.jpi : 1.19
+INSTALLED plugins/teamconcert.jpi : 1.2.0.3
+INSTALLED plugins/greenballs.jpi : 1.15
+INSTALLED plugins/matrix-project.jpi : 1.12
+INSTALLED plugins/ssh-credentials.jpi : 1.13
+INSTALLED plugins/external-monitor-job.jpi : 1.7
+INSTALLED plugins/ldap.jpi : 1.17
+INSTALLED plugins/workflow-step-api.jpi : 2.13
+INSTALLED plugins/sse-gateway.jpi : 1.15
+INSTALLED plugins/junit.jpi : 1.21
+INSTALLED plugins/variant.jpi : 1.1
+INSTALLED plugins/scm-api.jpi : 2.2.3
+INSTALLED plugins/cloudbees-bitbucket-branch-source.jpi : 2.2.3
+INSTALLED plugins/ant.jpi : 1.7
+INSTALLED plugins/mercurial.jpi : 2.1
+INSTALLED plugins/metrics.jpi : 3.1.2.10
+INSTALLED plugins/pam-auth.jpi : 1.3
+INSTALLED plugins/workflow-job.jpi : 2.14.1
+INSTALLED plugins/workflow-durable-task-step.jpi : 2.15
+INSTALLED plugins/structs.jpi : 1.10
+INSTALLED plugins/ibm-ucdeploy-build-steps-2.6.929921.jpi : 2.6.929921
+INSTALLED plugins/blueocean-personalization.jpi : 1.3.0
+INSTALLED plugins/blueocean.jpi : 1.3.0
+INSTALLED plugins/blueocean-pipeline-api-impl.jpi : 1.3.0
+INSTALLED plugins/pipeline-model-definition.jpi : 1.2.2
+INSTALLED plugins/blueocean-jwt.jpi : 1.3.0
+INSTALLED plugins/blueocean-events.jpi : 1.3.0
+INSTALLED plugins/jquery-detached.jpi : 1.2.1
+INSTALLED plugins/plain-credentials.jpi : 1.4
+INSTALLED plugins/blueocean-git-pipeline.jpi : 1.3.0
+INSTALLED plugins/pipeline-model-declarative-agent.jpi : 1.1.1
+INSTALLED plugins/workflow-multibranch.jpi : 2.16
+INSTALLED plugins/pipeline-stage-tags-metadata.jpi : 1.2.2
+INSTALLED plugins/pipeline-model-api.jpi : 1.2.2
+INSTALLED plugins/docker-commons.jpi : 1.9
+INSTALLED plugins/blueocean-commons.jpi : 1.3.0
+INSTALLED plugins/blueocean-bitbucket-pipeline.jpi : 1.3.0
+INSTALLED plugins/blueocean-pipeline-scm-api.jpi : 1.3.0
+INSTALLED plugins/blueocean-display-url.jpi : 2.1.0
+INSTALLED plugins/blueocean-i18n.jpi : 1.3.0
+INSTALLED plugins/pipeline-build-step.jpi : 2.5.1
+INSTALLED plugins/pipeline-stage-step.jpi : 2.2
+INSTALLED plugins/github.jpi : 1.28.0
+INSTALLED plugins/github-branch-source.jpi : 2.2.3
+INSTALLED plugins/credentials-binding.jpi : 1.13
+INSTALLED plugins/blueocean-rest.jpi : 1.3.0
+INSTALLED plugins/github-api.jpi : 1.89
+INSTALLED plugins/blueocean-rest-impl.jpi : 1.3.0
+INSTALLED plugins/pipeline-graph-analysis.jpi : 1.5
+INSTALLED plugins/docker-workflow.jpi : 1.13
+INSTALLED plugins/blueocean-dashboard.jpi : 1.3.0
+INSTALLED plugins/workflow-cps.jpi : 2.41
+INSTALLED plugins/blueocean-jira.jpi : 1.3.0
+INSTALLED plugins/pipeline-milestone-step.jpi : 1.3.1
+INSTALLED plugins/favorite.jpi : 2.3.0
+INSTALLED plugins/blueocean-github-pipeline.jpi : 1.3.0
+INSTALLED plugins/git-server.jpi : 1.7
+INSTALLED plugins/workflow-basic-steps.jpi : 2.6
+INSTALLED plugins/blueocean-autofavorite.jpi : 1.0.0
+INSTALLED plugins/blueocean-pipeline-editor.jpi : 1.3.0
+INSTALLED plugins/blueocean-config.jpi : 1.3.0
+INSTALLED plugins/ace-editor.jpi : 1.1
+INSTALLED plugins/workflow-cps-global-lib.jpi : 2.9
+INSTALLED plugins/pipeline-model-extensions.jpi : 1.2.2
+INSTALLED plugins/blueocean-web.jpi : 1.3.0
+INSTALLED plugins/authentication-tokens.jpi : 1.3
+INSTALLED plugins/pipeline-input-step.jpi : 2.8
+INSTALLED plugins/momentjs.jpi : 1.1.1
+INSTALLED plugins/pipeline-maven.jpi : 3.0.1
+INSTALLED plugins/config-file-provider.jpi : 2.16.4
+INSTALLED plugins/pipeline-rest-api.jpi : 2.9
+INSTALLED plugins/pipeline-stage-view.jpi : 2.9
+INSTALLED plugins/handlebars.jpi : 1.1.1
+INSTALLED plugins/pipeline-github-lib.jpi : 1.0
+INSTALLED jobs/Prepare environment - Run once before demo builds/.DS_Store
+INSTALLED jobs/Prepare environment - Run once before demo builds/._.DS_Store
+INSTALLED jobs/Prepare environment - Run once before demo builds/config.xml
+INSTALLED jobs/UrbanCode Deploy Demo/jobs/UCD Demo Service pipeline/._config.xml
+INSTALLED jobs/UrbanCode Deploy Demo/jobs/UCD Demo Service pipeline/.DS_Store
+INSTALLED jobs/UrbanCode Deploy Demo/jobs/UCD Demo Service pipeline/config.xml
+INSTALLED jobs/UrbanCode Deploy Demo/jobs/UCD Demo UI pipeline/._config.xml
+INSTALLED jobs/UrbanCode Deploy Demo/jobs/UCD Demo UI pipeline/.DS_Store
+INSTALLED jobs/UrbanCode Deploy Demo/jobs/UCD Demo UI pipeline/config.xml
+INSTALLED jobs/UrbanCode Deploy Demo/config.xml
+INSTALLED ucd-prep/component-process-ui.tmp
+INSTALLED ucd-prep/buildComponent.sh
+INSTALLED ucd-prep/buildEnvironment.sh
+INSTALLED ucd-prep/application-demo.json
+INSTALLED ucd-prep/application-process-demo.tmp
+INSTALLED ucd-prep/component-ui.json
+INSTALLED ucd-prep/buildResource.sh
+INSTALLED ucd-prep/resource-dev-service.json
+INSTALLED ucd-prep/resource-dev-environment.json
+INSTALLED ucd-prep/resource-test-ui.json
+INSTALLED ucd-prep/buildApplication.sh
+INSTALLED ucd-prep/.DS_Store
+INSTALLED ucd-prep/resource-dev-ui.json
+INSTALLED ucd-prep/component-process-service.tmp
+INSTALLED ucd-prep/jenkins-cli.jar
+INSTALLED ucd-prep/resource-test-environment.json
+INSTALLED ucd-prep/resource-dev-tomcat.json
+INSTALLED ucd-prep/component-service.json
+INSTALLED ucd-prep/ucd_demo.txt
+INSTALLED ucd-prep/resource-test-service.json
+INSTALLED ucd-prep/resource-test-tomcat.json
+INSTALLED ucd-prep/Jenkinsfile
+INSTALLED jenkins-jobs/jenkins-jobs.mv.db
+INSTALLED jenkins-jobs/jenkins-jobs.trace.db
+INSTALLED jenkins-jobs/jenkins-jobs.lock.db
+INSTALLED secrets/jenkins.model.Jenkins.crumbSalt
+INSTALLED secrets/org.jenkinsci.main.modules.instance_identity.InstanceIdentity.KEY
+INSTALLED secrets/jenkins.security.ApiTokenProperty.seed
+INSTALLED secrets/hudson.console.AnnotatedLargeText.consoleAnnotator
+INSTALLED secrets/hudson.model.Job.serverCookie
+INSTALLED secrets/hudson.console.ConsoleNote.MAC
+INSTALLED secrets/slave-to-master-security-kill-switch
+INSTALLED secrets/.DS_Store
+INSTALLED secrets/hudson.util.Secret
+INSTALLED secrets/master.key
+INSTALLED com.ibm.team.build.internal.hjplugin.RTCScm.xml
+INSTALLED org.jenkinsci.plugins.workflow.libs.GlobalLibraries.xml
+INSTALLED hudson.model.UpdateCenter.xml
+INSTALLED org.jenkinsci.plugins.pipeline.modeldefinition.config.GlobalConfig.xml
+INSTALLED jenkins.security.UpdateSiteWarningsConfiguration.xml
+INSTALLED nodeMonitors.xml
+INSTALLED secret.key
+INSTALLED jenkins.model.ArtifactManagerConfiguration.xml
+INSTALLED org.jenkinsci.plugins.gitclient.JGitApacheTool.xml
+INSTALLED github-plugin-configuration.xml
+INSTALLED hudson.plugins.emailext.ExtendedEmailPublisher.xml
+INSTALLED com.cloudbees.jenkins.plugins.bitbucket.endpoints.BitbucketEndpointConfiguration.xml
+INSTALLED hudson.triggers.SCMTrigger.xml
+INSTALLED hudson.tasks.Shell.xml
+INSTALLED hudson.plugins.gradle.Gradle.xml
+INSTALLED hudson.plugins.mercurial.MercurialInstallation.xml
+INSTALLED hudson.tasks.Maven.xml
+INSTALLED org.jenkinsci.plugins.workflow.flow.FlowExecutionList.xml
+INSTALLED hudson.plugins.build_timeout.operations.BuildStepOperation.xml
+INSTALLED jenkins.metrics.api.MetricsAccessKey.xml
+INSTALLED jenkins.CLI.xml
+INSTALLED jenkins.security.QueueItemAuthenticatorConfiguration.xml
+INSTALLED org.jenkinsci.plugins.gitclient.JGitTool.xml
+INSTALLED com.cloudbees.jenkins.plugins.customtools.CustomTool.xml
+INSTALLED hudson.plugins.timestamper.TimestamperConfig.xml
+INSTALLED .DS_Store
+INSTALLED credentials.xml
+INSTALLED hudson.tasks.Ant.xml
+INSTALLED secret.key.not-so-secret
+INSTALLED com.ibm.team.build.internal.hjplugin.RTCBuildToolInstallation.xml
+INSTALLED hudson.plugins.git.GitTool.xml
+INSTALLED jenkins.model.DownloadSettings.xml
+INSTALLED hudson.plugins.jira.JiraProjectProperty.xml
+INSTALLED org.jenkinsci.plugins.pipeline.maven.GlobalPipelineMavenConfig.xml
+INSTALLED identity.key.enc
+INSTALLED hudson.tasks.Mailer.xml
+INSTALLED scriptApproval.xml
+INSTALLED jenkins.mvn.GlobalMavenConfig.xml
+INSTALLED jenkins.model.JenkinsLocationConfiguration.xml
+INSTALLED com.urbancode.jenkins.plugins.ucdeploy.GlobalConfig.xml
+INSTALLED config.xml
+INSTALLED org.jenkinsci.plugins.docker.commons.tools.DockerTool.xml
+INSTALLED hudson.plugins.git.GitSCM.xml

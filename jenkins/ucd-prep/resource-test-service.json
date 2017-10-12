@@ -1,0 +1,4 @@
+{
+	role: "hello-service",
+	parent: "\/TEST Environment\/Tomcat server"
+}

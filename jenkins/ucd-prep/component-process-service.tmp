@@ -1,0 +1,214 @@
+{
+	"component" : $componentId,
+	"name": "Deploy to Tomcat",
+	"description": "",
+	"defaultWorkingDir": "${p:resource\/work.dir}\/${p:component.name}",
+	"takesVersion": true,
+	"inventoryActionType": "ADD",
+	"status": "Active",
+	"configActionType": "ADD",
+	"active": true,
+	"deleted": false,
+	"propDefs": [],
+	"rootActivity": {
+		"edges": [
+			{
+				"to": "Start Tomcat",
+				"from": "Download Artifacts",
+				"type": "SUCCESS",
+				"value": ""
+			},
+			{
+				"to": "Clean Working Directory",
+				"type": "ALWAYS",
+				"value": ""
+			},
+			{
+				"to": "Deploy Application",
+				"from": "Undeploy Application",
+				"type": "ALWAYS",
+				"value": ""
+			},
+			{
+				"to": "Undeploy Application",
+				"from": "Start Tomcat",
+				"type": "ALWAYS",
+				"value": ""
+			},
+			{
+				"to": "972ed9fbd60be35d1d9d4eae18f61a",
+				"from": "Deploy Application",
+				"type": "SUCCESS",
+				"value": ""
+			},
+			{
+				"to": "Download Artifacts",
+				"from": "Clean Working Directory",
+				"type": "SUCCESS",
+				"value": ""
+			}
+		],
+		"offsets": [
+			{
+				"name": "Download Artifacts",
+				"x": -125,
+				"y": 290,
+				"h": 100,
+				"w": 390
+			},
+			{
+				"name": "Start Tomcat",
+				"x": -85,
+				"y": 440,
+				"h": 100,
+				"w": 310
+			},
+			{
+				"name": "Undeploy Application",
+				"x": -135,
+				"y": 590,
+				"h": 100,
+				"w": 410
+			},
+			{
+				"name": "Clean Working Directory",
+				"x": -180,
+				"y": 140,
+				"h": 100,
+				"w": 500
+			},
+			{
+				"name": "Deploy Application",
+				"x": -120,
+				"y": 740,
+				"h": 100,
+				"w": 380
+			},
+			{
+				"name": "972ed9fbd60be35d1d9d4eae18f61a",
+				"x": -5,
+				"y": 890,
+				"h": 90,
+				"w": 150
+			}
+		],
+		"layoutMode": "auto",
+		"type": "graph",
+		"name": "deebd51d-0ba1-45ef-8562-24f804f8c096",
+		"children": [
+			{
+				"type": "finish",
+				"name": "972ed9fbd60be35d1d9d4eae18f61a",
+				"children": []
+			},
+			{
+				"allowFailure": false,
+				"useImpersonation": false,
+				"showHidden": false,
+				"impersonationUseSudo": false,
+				"pluginVersion": 61,
+				"commandName": "Delete Files and Directories",
+				"pluginName": "File Utils",
+				"properties": {
+					"baseDir": ".",
+					"includes": "**\/*",
+					"excludes": "",
+					"followSymlinks": "false",
+					"caseSensitive": "true"
+				},
+				"type": "plugin",
+				"name": "Clean Working Directory",
+				"children": []
+			},
+			{
+				"allowFailure": false,
+				"useImpersonation": false,
+				"showHidden": false,
+				"impersonationUseSudo": false,
+				"pluginVersion": 28,
+				"commandName": "Download Artifacts",
+				"pluginName": "IBM UrbanCode Deploy Versioned File Storage",
+				"properties": {
+					"directoryOffset": ".",
+					"artifactSetBaseDir": "",
+					"fileIncludePatterns": "**\/*",
+					"fileExcludePatterns": "",
+					"syncMode": "true",
+					"fullVerification": "true",
+					"setFileExecuteBits": "false",
+					"verifyFileIntegrity": "false",
+					"versionId": "${p:version.id}",
+					"serverUrl": "${p:server.url}",
+					"compId": "${p:component.id}",
+					"resId": "${p:resource.id}",
+					"charset": "",
+					"label": ""
+				},
+				"type": "plugin",
+				"name": "Download Artifacts",
+				"children": []
+			},
+			{
+				"allowFailure": false,
+				"useImpersonation": false,
+				"showHidden": false,
+				"impersonationUseSudo": false,
+				"pluginVersion": 7,
+				"commandName": "Start Tomcat",
+				"pluginName": "Tomcat",
+				"properties": {
+					"launcherLocation": "${p:environment\/tomcat.start}",
+					"options": "",
+					"timeout": "",
+					"port": "${p:environment\/tomcat.port}",
+					"hostname": "",
+					"catalinaBase": "",
+					"catalinaHome": "${p:environment\/tomcat.home}",
+					"javaHome": ""
+				},
+				"type": "plugin",
+				"name": "Start Tomcat",
+				"children": []
+			},
+			{
+				"allowFailure": false,
+				"useImpersonation": false,
+				"showHidden": false,
+				"impersonationUseSudo": false,
+				"pluginVersion": 7,
+				"commandName": "Undeploy Application",
+				"pluginName": "Tomcat",
+				"properties": {
+					"tomcatManagerUrl": "${p:environment\/tomcat.url}:${p:environment\/tomcat.port}\/manager\/text",
+					"tomcatUsername": "admin",
+					"tomcatPassword": "crypt_v1{AES\/CBC\/PKCS5Padding|aes128keyrufg|8gJ+SKQmmNRJPSAgpFrU3Q==|dC2xRveP6XW3QQYwm3210A==}",
+					"tomcatContext": "\/hello-service"
+				},
+				"type": "plugin",
+				"name": "Undeploy Application",
+				"children": []
+			},
+			{
+				"allowFailure": false,
+				"useImpersonation": false,
+				"showHidden": false,
+				"impersonationUseSudo": false,
+				"pluginVersion": 7,
+				"commandName": "Deploy Application",
+				"pluginName": "Tomcat",
+				"properties": {
+					"tomcatManagerUrl": "${p:environment\/tomcat.url}:${p:environment\/tomcat.port}\/manager\/text",
+					"tomcatUsername": "admin",
+					"tomcatPassword": "crypt_v1{AES\/CBC\/PKCS5Padding|aes128keyrufg|yPCgLR7aEuIysRNnVx0H\/A==|1iVgWirrKMlZ5JJo0N82ag==}",
+					"tomcatContext": "\/hello-service",
+					"warFile": ".\/hello-service.war",
+					"configFile": ""
+				},
+				"type": "plugin",
+				"name": "Deploy Application",
+				"children": []
+			}
+		]
+	}
+
+}

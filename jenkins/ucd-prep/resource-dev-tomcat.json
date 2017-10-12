@@ -1,0 +1,6 @@
+{
+	name: "Tomcat server",
+	decription: "Development Tomcat server",
+	parent: "\/DEV Environment",
+	agent: "dev-server"
+}

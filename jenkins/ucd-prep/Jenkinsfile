@@ -1,0 +1,97 @@
+pipeline
+{
+	agent any
+	
+	environment
+	{
+		UCD_SITE = 'ucd_demo'
+		UCD_URL = 'https://ucd-server:8443'
+		UCD_CREDENTIAL = 'UCD-admin'
+	}
+
+	stages
+	{
+		stage('Statuses')
+		{
+			steps
+			{
+				withEnv(["PATH+UDCLIENT=${tool 'UrbanCodeClient'}"])
+				{
+					withCredentials([usernamePassword(credentialsId: "${UCD_CREDENTIAL}", usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')])
+					{
+						sh "udclient -username ${USERNAME} -password ${PASSWORD} -weburl ${UCD_URL} createStatus -type version -status Stable -color \"#00B2EF\" -description \"Has passed unit tests.\""
+						sh "udclient -username ${USERNAME} -password ${PASSWORD} -weburl ${UCD_URL} createStatus -type snapshot -status Stable -color \"#00B2EF\" -description \"Has passed automated tests.\""
+					}
+				}
+			}
+		}
+
+		stage('Resources')
+		{
+			steps
+			{
+				withEnv(["PATH+UDCLIENT=${tool 'UrbanCodeClient'}"])
+				{
+					withCredentials([usernamePassword(credentialsId: "${UCD_CREDENTIAL}", usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')])
+					{
+						sh "${JENKINS_HOME}/ucd-prep/buildResource.sh dev"
+						sh "${JENKINS_HOME}/ucd-prep/buildResource.sh test"
+					}
+				}
+			}
+		}
+		
+		stage('Components')
+		{
+			steps
+			{
+				withEnv(["PATH+UDCLIENT=${tool 'UrbanCodeClient'}"])
+				{
+					withCredentials([usernamePassword(credentialsId: "${UCD_CREDENTIAL}", usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')])
+					{
+						sh "${JENKINS_HOME}/ucd-prep/buildComponent.sh service"
+						sh "${JENKINS_HOME}/ucd-prep/buildComponent.sh ui"
+					}
+				}
+			}
+		}
+		
+		stage('Application')
+		{
+			steps
+			{
+				withEnv(["PATH+UDCLIENT=${tool 'UrbanCodeClient'}"])
+				{
+					withCredentials([usernamePassword(credentialsId: "${UCD_CREDENTIAL}", usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')])
+					{
+						sh "${JENKINS_HOME}/ucd-prep/buildApplication.sh"
+					}
+				}
+			}
+		}
+		
+		stage('Environments')
+		{
+			steps
+			{
+				withEnv(["PATH+UDCLIENT=${tool 'UrbanCodeClient'}"])
+				{
+					withCredentials([usernamePassword(credentialsId: "${UCD_CREDENTIAL}", usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')])
+					{
+						sh "${JENKINS_HOME}/ucd-prep/buildEnvironment.sh Dev '#00B2EF'"
+						sh "${JENKINS_HOME}/ucd-prep/buildEnvironment.sh Test '#FFCF01'"
+					}
+				}
+			}
+		}
+		
+		stage('Builds')
+		{
+			steps
+			{
+				sh "java -jar ${JENKINS_HOME}/ucd-prep/jenkins-cli.jar -http -s http://localhost:8080 -auth @${JENKINS_HOME}/ucd-prep/ucd_demo.txt enable-job 'UrbanCode Deploy Demo/UCD Demo Service pipeline'"
+				sh "java -jar ${JENKINS_HOME}/ucd-prep/jenkins-cli.jar -http -s http://localhost:8080 -auth @${JENKINS_HOME}/ucd-prep/ucd_demo.txt enable-job 'UrbanCode Deploy Demo/UCD Demo UI pipeline'"
+			}
+		}
+	}
+} 

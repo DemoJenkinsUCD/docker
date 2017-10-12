@@ -1,0 +1,126 @@
+{
+	"application": $applicationId,
+	"name": "Deploy all to Tomcat",
+	"description": "",
+	"inventoryManagementType": "AUTOMATIC",
+	"offlineAgentHandling": "PRE_EXECUTION_CHECK",
+	"rootActivity": {
+		"edges": [
+			{
+				"to": "2c005464a6ebcaf3ff8cd58cbeb2bc",
+				"type": "ALWAYS",
+				"value": ""
+			},
+			{
+				"to": "ed818bb7e4962573ff2a5734e127c6",
+				"from": "2c005464a6ebcaf3ff8cd58cbeb2bc",
+				"type": "SUCCESS",
+				"value": ""
+			},
+			{
+				"to": "f26fbca5e8cb127adf52a1036e77f4",
+				"from": "ed818bb7e4962573ff2a5734e127c6",
+				"type": "SUCCESS",
+				"value": ""
+			}
+		],
+		"offsets": [
+			{
+				"name": "f26fbca5e8cb127adf52a1036e77f4",
+				"x": -5,
+				"y": 520,
+				"h": 80,
+				"w": 120
+			},
+			{
+				"name": "2c005464a6ebcaf3ff8cd58cbeb2bc",
+				"x": -75,
+				"y": 180,
+				"h": 70,
+				"w": 260
+			},
+			{
+				"name": "ed818bb7e4962573ff2a5734e127c6",
+				"x": -80,
+				"y": 350,
+				"h": 70,
+				"w": 270
+			}
+		],
+		"layoutMode": "auto",
+		"type": "graph",
+		"name": "86d40660-0be4-49d9-b5ff-398899552e98",
+		"children": [
+			{
+				"type": "finish",
+				"name": "f26fbca5e8cb127adf52a1036e77f4",
+				"children": []
+			},
+			{
+				"componentName": "hello-service",
+				"properties": [
+					{
+						"name": "maxIteration",
+						"value": "-1"
+					},
+					{
+						"name": "runOnlyOnFirst",
+						"value": "false"
+					},
+					{
+						"name": "failFast",
+						"value": "false"
+					}
+				],
+				"type": "componentEnvironmentIterator",
+				"name": "2c005464a6ebcaf3ff8cd58cbeb2bc",
+				"children": [{
+					"componentName": "hello-service",
+					"status": "Active",
+					"type": "inventoryVersionDiff",
+					"name": "60f7b98f-2a06-4dc7-a080-f13c74c431b8",
+					"children": [{
+						"componentProcessName": "Deploy to Tomcat",
+						"componentName": "hello-service",
+						"allowFailure": false,
+						"properties": {},
+						"type": "componentProcess",
+						"name": "Install: \"hello-service\"",
+						"children": []
+					}]
+				}]
+			},
+			{
+				"componentName": "hello-ui",
+				"properties": [
+					{
+						"name": "maxIteration",
+						"value": "-1"
+					},
+					{
+						"name": "failFast",
+						"value": "false"
+					}
+				],
+				"type": "componentEnvironmentIterator",
+				"name": "ed818bb7e4962573ff2a5734e127c6",
+				"children": [{
+					"componentName": "hello-ui",
+					"status": "Active",
+					"type": "inventoryVersionDiff",
+					"name": "79ca26bf-b625-4dd6-8137-6eed62655d77",
+					"children": [{
+						"componentProcessName": "Deploy to Tomcat",
+						"componentName": "hello-ui",
+						"allowFailure": false,
+						"properties": {},
+						"type": "componentProcess",
+						"name": "Install: \"hello-ui\"",
+						"children": []
+					}]
+				}]
+			}
+		]
+	},
+	"propDefs": [],
+}
