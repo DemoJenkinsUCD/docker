@@ -31,10 +31,14 @@ services:
       - type: volume
         source: ..
         target: /usr/demo
+      - type: volume
+        source: ~/.m2/repository
+        target: /var/jenkins_home/.m2/repository
+#      - type: volume
+#        source: ./jenkins/hold/jenkins_home
+#        target: /var/jenkins_home
     ports:
       - "8085:8080"
-    extra_hosts:
-      - "ohvrtc01.present.iccohio.com:10.1.15.140"
   ucd-server:
     image: dju-ucd
     build:
@@ -59,3 +63,17 @@ services:
       - "8088:8080"
     environment:
       - AGENT_NAME=test-server
+  gem-server:
+    image: spoonest/geminabox
+    ports:
+      - "9292:9292"
+    volumes:
+      - type: volume
+        source: ./jenkins/hold/gems
+        target: /webapps/geminabox/data
+    environment:
+      - PRIVATE=true
+      - USERNAME=gem
+      - PASSWORD=gem
+#      - RUBYGEMS_PROXY=true
+    

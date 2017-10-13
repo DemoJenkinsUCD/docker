@@ -18,8 +18,6 @@ FROM jenkins/jenkins
 
 USER root
 
-VOLUME /usr/demo
-
 # Copy initialization script that creates default user
 ENV JENKINS_USER="ucd_demo" JENKINS_PASS="password"
 COPY default-user.groovy /usr/share/jenkins/ref/init.groovy.d/default-user.groovy
@@ -125,3 +123,6 @@ RUN wget --no-verbose -O /tmp/geckodriver.tar.gz https://github.com/mozilla/geck
 
 
 USER jenkins
+
+VOLUME /usr/demo
+VOLUME /var/jenkins_home/.m2/repository
