@@ -14,7 +14,8 @@
 # limitations under the License.
 #
 
-FROM ibmcom/ucds:latest
+# Pre-loading plugins doesn't seem to work correctly with more recent versions of this image.  Further research is required.
+FROM ibmcom/ucds:6.2.5.2.929926
 
 RUN mkdir -p /tmp/appdata/var/plugins/command/stage
 

@@ -125,4 +125,3 @@ RUN wget --no-verbose -O /tmp/geckodriver.tar.gz https://github.com/mozilla/geck
 USER jenkins
 
 VOLUME /usr/demo
-VOLUME /var/jenkins_home/.m2/repository

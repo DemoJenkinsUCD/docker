@@ -3,7 +3,7 @@
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
+# You may obtain a copy of the License atd
 #
 #     http://www.apache.org/licenses/LICENSE-2.0
 #
@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-version: "3.3"
+version: "3.4"
 services:
   jenkins:
     image: dju-jenkins
@@ -28,15 +28,10 @@ services:
           memory: 2G
     shm_size: 2G
     volumes:
-      - type: volume
+      -   dju_jenkins_home:/var/jenkins_home
+      - type: bind
         source: ..
         target: /usr/demo
-      - type: volume
-        source: ~/.m2/repository
-        target: /var/jenkins_home/.m2/repository
-#      - type: volume
-#        source: ./jenkins/hold/jenkins_home
-#        target: /var/jenkins_home
     ports:
       - "8085:8080"
   ucd-server:
@@ -68,12 +63,13 @@ services:
     ports:
       - "9292:9292"
     volumes:
-      - type: volume
-        source: ./jenkins/hold/gems
-        target: /webapps/geminabox/data
+      - dju_geminabox_gems:/webapps/geminabox/data
     environment:
       - PRIVATE=true
       - USERNAME=gem
       - PASSWORD=gem
 #      - RUBYGEMS_PROXY=true
-    
+
+volumes:
+  dju_jenkins_home:
+  dju_geminabox_gems:    
