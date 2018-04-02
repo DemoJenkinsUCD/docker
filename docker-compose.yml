@@ -20,20 +20,16 @@ services:
     image: dju-jenkins
     build:
       context: jenkins
-    deploy:
-      resources:
-        limits:
-          memory: 4G
-        reservations:
-          memory: 2G
     shm_size: 2G
+    ports:
+      - "8085:8080"
     volumes:
       -   dju_jenkins_home:/var/jenkins_home
       - type: bind
         source: ..
         target: /usr/demo
-    ports:
-      - "8085:8080"
+    environment:
+      - TZ
   ucd-server:
     image: dju-ucd
     build:
@@ -42,6 +38,8 @@ services:
       - "8446:8443"
       - "7918:7918"
       - "8086:8080"
+    environment:
+      - TZ
   dev-server:
     image: dju-tomcat-agent
     build:
@@ -49,6 +47,7 @@ services:
     ports:
       - "8087:8080"
     environment:
+      - TZ
       - AGENT_NAME=dev-server
   test-server:
     image: dju-tomcat-agent
@@ -57,6 +56,7 @@ services:
     ports:
       - "8088:8080"
     environment:
+      - TZ
       - AGENT_NAME=test-server
   gem-server:
     image: spoonest/geminabox
@@ -65,6 +65,7 @@ services:
     volumes:
       - dju_geminabox_gems:/webapps/geminabox/data
     environment:
+      - TZ
       - PRIVATE=true
       - USERNAME=gem
       - PASSWORD=gem
