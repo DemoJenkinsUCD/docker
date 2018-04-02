@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version='1.1' encoding='UTF-8'?>
 <com.urbancode.jenkins.plugins.ucdeploy.GlobalConfig_-GlobalConfigDescriptor plugin="ibm-ucdeploy-build-steps@2.6.929921">
   <sites>
     <com.urbancode.jenkins.plugins.ucdeploy.UCDeploySite>
@@ -6,7 +6,6 @@
       <url>https://ucd-server:8443</url>
       <user>admin</user>
       <password>{AQAAABAAAAAQsJes0o7OYXX3Ku0NtKK5g8RvvzUG7luPMnNoQREgVhI=}</password>
-      <adminUser>false</adminUser>
       <trustAllCerts>true</trustAllCerts>
     </com.urbancode.jenkins.plugins.ucdeploy.UCDeploySite>
   </sites>

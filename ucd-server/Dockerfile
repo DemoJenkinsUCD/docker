@@ -14,10 +14,12 @@
 # limitations under the License.
 #
 
-# Pre-loading plugins doesn't seem to work correctly with more recent versions of this image.  Further research is required.
-FROM ibmcom/ucds:6.2.5.2.929926
+FROM ibmcom/ucds
 
+# Copy configuration scripts
+COPY tmp/ /tmp/
+
+# Load default plugins to staging area
 RUN mkdir -p /tmp/appdata/var/plugins/command/stage
-
-RUN  curl --output /opt/ibm-ucd/server/appdata/var/plugins/command/stage/LinuxSystemTools-10.868958.zip "https://public.dhe.ibm.com/software/products/UrbanCode/plugins/ibmucd/LinuxSystemTools/LinuxSystemTools-10.868958.zip" \
-  && curl --output /opt/ibm-ucd/server/appdata/var/plugins/command/stage/Tomcat-7.868953.zip "https://public.dhe.ibm.com/software/products/UrbanCode/plugins/ibmucd/Tomcat/Tomcat-7.868953.zip"
+RUN  curl --output /tmp/appdata/var/plugins/command/stage/LinuxSystemTools-10.868958.zip "https://public.dhe.ibm.com/software/products/UrbanCode/plugins/ibmucd/LinuxSystemTools/LinuxSystemTools-10.868958.zip" \
+  && curl --output /tmp/appdata/var/plugins/command/stage/Tomcat-7.868953.zip "https://public.dhe.ibm.com/software/products/UrbanCode/plugins/ibmucd/Tomcat/Tomcat-7.868953.zip"

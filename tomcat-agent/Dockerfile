@@ -21,6 +21,9 @@ USER root
 # Configure default users
 COPY tomcat-users.xml /usr/local/tomcat/conf/
 
+# Set logging properties
+COPY logging.properties /usr/local/tomcat/conf/
+
 # Download UrbanCode Deploy agent setup utilities for Docker from GitHub
 ADD https://raw.githubusercontent.com/IBM-UrbanCode/UCD-Docker-Images/master/deploy/ga/agent/common/agent-setup.sh /tmp/ucda/
 ADD https://raw.githubusercontent.com/IBM-UrbanCode/UCD-Docker-Images/master/deploy/ga/agent/common/startAgent.sh /tmp/ucda/

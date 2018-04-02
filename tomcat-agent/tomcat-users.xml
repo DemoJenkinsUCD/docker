@@ -27,6 +27,9 @@
   section below since they are intended for use with the examples web
   application.
 -->
+  <role rolename="manager-gui" />
+  <role rolename="manager-script" />
+  <role rolename="manager-status" />
   <user username="admin" password="admin" roles="manager-gui,manager-script,manager-status" />
 
 <!--

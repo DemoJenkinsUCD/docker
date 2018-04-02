@@ -13,7 +13,7 @@
 	"rootActivity": {
 		"edges": [
 			{
-				"to": "Start Tomcat",
+				"to": "Undeploy Application",
 				"from": "Download Artifacts",
 				"type": "SUCCESS",
 				"value": ""
@@ -26,12 +26,6 @@
 			{
 				"to": "Deploy Application",
 				"from": "Undeploy Application",
-				"type": "ALWAYS",
-				"value": ""
-			},
-			{
-				"to": "Undeploy Application",
-				"from": "Start Tomcat",
 				"type": "ALWAYS",
 				"value": ""
 			},
@@ -55,13 +49,6 @@
 				"y": 290,
 				"h": 100,
 				"w": 390
-			},
-			{
-				"name": "Start Tomcat",
-				"x": -85,
-				"y": 440,
-				"h": 100,
-				"w": 310
 			},
 			{
 				"name": "Undeploy Application",
@@ -154,34 +141,12 @@
 				"showHidden": false,
 				"impersonationUseSudo": false,
 				"pluginVersion": 7,
-				"commandName": "Start Tomcat",
-				"pluginName": "Tomcat",
-				"properties": {
-					"launcherLocation": "${p:environment\/tomcat.start}",
-					"options": "",
-					"timeout": "",
-					"port": "${p:environment\/tomcat.port}",
-					"hostname": "",
-					"catalinaBase": "",
-					"catalinaHome": "${p:environment\/tomcat.home}",
-					"javaHome": ""
-				},
-				"type": "plugin",
-				"name": "Start Tomcat",
-				"children": []
-			},
-			{
-				"allowFailure": false,
-				"useImpersonation": false,
-				"showHidden": false,
-				"impersonationUseSudo": false,
-				"pluginVersion": 7,
 				"commandName": "Undeploy Application",
 				"pluginName": "Tomcat",
 				"properties": {
 					"tomcatManagerUrl": "${p:environment\/tomcat.url}:${p:environment\/tomcat.port}\/manager\/text",
 					"tomcatUsername": "admin",
-					"tomcatPassword": "crypt_v1{AES\/CBC\/PKCS5Padding|aes128keyrufg|8gJ+SKQmmNRJPSAgpFrU3Q==|dC2xRveP6XW3QQYwm3210A==}",
+					"tomcatPassword": "admin",
 					"tomcatContext": "\/hello-ui"
 				},
 				"type": "plugin",
@@ -199,7 +164,7 @@
 				"properties": {
 					"tomcatManagerUrl": "${p:environment\/tomcat.url}:${p:environment\/tomcat.port}\/manager\/text",
 					"tomcatUsername": "admin",
-					"tomcatPassword": "crypt_v1{AES\/CBC\/PKCS5Padding|aes128keyrufg|yPCgLR7aEuIysRNnVx0H\/A==|1iVgWirrKMlZ5JJo0N82ag==}",
+					"tomcatPassword": "admin",
 					"tomcatContext": "\/hello-ui",
 					"warFile": ".\/hello-ui.war",
 					"configFile": ""

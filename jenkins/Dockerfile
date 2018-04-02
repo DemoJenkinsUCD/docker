@@ -36,8 +36,8 @@ RUN install-plugins.sh < /usr/share/jenkins/install/plugins-pipeline.txt
 RUN install-plugins.sh < /usr/share/jenkins/install/plugins-blueocean.txt
 
 # Load IBM UrbanCode Deploy pipeline plugin
-ADD http://public.dhe.ibm.com/software/products/UrbanCode/plugins/ibmucd/jenkins-pipeline-ud-plugin/ibm-ucdeploy-build-steps-2.6.929921.hpi /usr/share/jenkins/ref/plugins/ibm-ucdeploy-build-steps-2.6.929921.jpi
-RUN chmod 644 /usr/share/jenkins/ref/plugins/ibm-ucdeploy-build-steps-2.6.929921.jpi
+ADD http://public.dhe.ibm.com/software/products/UrbanCode/plugins/ibmucd/jenkins-pipeline-ud-plugin/ibm-ucdeploy-build-steps-2.8.958262.hpi /usr/share/jenkins/ref/plugins/ibm-ucdeploy-build-steps-2.8.958262.jpi
+RUN chmod 644 /usr/share/jenkins/ref/plugins/ibm-ucdeploy-build-steps-2.8.958262.jpi
 
 # Make necessary tool installations available
 COPY install/tools/ /usr/share/jenkins/install/tools/
