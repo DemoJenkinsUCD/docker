@@ -18,4 +18,4 @@
 
 cp -v /tmp/appdata/var/plugins/command/stage/* /opt/ibm-ucd/server/appdata/var/plugins/command/stage
 
-# cp -fv /tmp/log4j.properties /opt/ibm-ucd/server/appdata/conf/server/log4j.properties
+cp -fv /tmp/log4j.properties /opt/ibm-ucd/server/appdata/conf/server/log4j.properties
