@@ -83,15 +83,6 @@ pipeline
 					}
 				}
 			}
-		}
-		
-		stage('Builds')
-		{
-			steps
-			{
-				sh "java -jar ${JENKINS_HOME}/ucd-prep/jenkins-cli.jar -http -s http://localhost:8080 -auth @${JENKINS_HOME}/ucd-prep/ucd_demo.txt enable-job 'UrbanCode Deploy Demo/UCD Demo Service pipeline'"
-				sh "java -jar ${JENKINS_HOME}/ucd-prep/jenkins-cli.jar -http -s http://localhost:8080 -auth @${JENKINS_HOME}/ucd-prep/ucd_demo.txt enable-job 'UrbanCode Deploy Demo/UCD Demo UI pipeline'"
-			}
-		}
+		}		
 	}
 } 
