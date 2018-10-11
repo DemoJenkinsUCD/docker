@@ -69,7 +69,7 @@ services:
       - PRIVATE=true
       - USERNAME=gem
       - PASSWORD=gem
-#      - RUBYGEMS_PROXY=true
+      - RUBYGEMS_PROXY=true
 
 volumes:
   dju_jenkins_home:
